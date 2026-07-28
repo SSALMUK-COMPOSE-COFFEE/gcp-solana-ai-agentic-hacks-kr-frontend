@@ -1,11 +1,11 @@
 {
-    "name": "untitled4",
-    "short_name": "untitled4",
+    "name": "팬덤 총대 에이전트",
+    "short_name": "팬덤 총대",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "팬덤 총대 자금 집행을 검증하는 에스크로·투명성 앱",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
