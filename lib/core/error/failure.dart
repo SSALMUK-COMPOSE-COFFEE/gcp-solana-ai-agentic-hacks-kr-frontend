@@ -16,6 +16,12 @@ final class NetworkFailure extends Failure {
   const NetworkFailure([super.message = 'No network connection']);
 }
 
+/// Session is gone or unrecoverable. The presentation layer should route to
+/// sign-in rather than showing a generic error.
+final class UnauthorizedFailure extends Failure {
+  const UnauthorizedFailure([super.message = 'Authentication required']);
+}
+
 final class CacheFailure extends Failure {
   const CacheFailure([super.message = 'Cache error occurred']);
 }

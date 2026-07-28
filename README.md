@@ -49,6 +49,18 @@ flutter run
 dart run build_runner watch --delete-conflicting-outputs
 ```
 
+## 서버 주소
+
+기본값은 `https://hajin.xyz`. GCP로 옮기면 빌드할 때 넘긴다.
+
+```bash
+flutter run --dart-define=BASE_URL=https://your-host
+```
+
+인증이 필요한 요청은 `dioProvider`를 쓴다. 액세스 토큰은 자동으로 붙고, 401이 오면
+`/auth/refresh`로 한 번 갱신한 뒤 원래 요청을 재시도한다. 로그인·회원가입처럼 토큰이
+없어야 하는 요청은 `Options(extra: skipAuth)`를 붙인다.
+
 ## 브랜치 전략
 
 - `main` — 배포 기준 브랜치
