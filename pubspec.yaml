@@ -1,5 +1,5 @@
-name: untitled4
-description: "A new Flutter project."
+name: gcp_solana_ai_agentic_hacks_kr_frontend
+description: "팬덤 총대 에이전트 — 팬덤 모금 자금의 집행을 AI 에이전트가 검증하는 에스크로·투명성 앱"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -34,6 +34,9 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  flutter_riverpod: 2.6.1
+  riverpod_annotation: 2.6.1
+  go_router: ^17.3.0
 
 dev_dependencies:
   flutter_test:
@@ -45,6 +48,10 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
+  riverpod_generator: ^2.6.5
+  build_runner: ^2.5.4
+  riverpod_lint: ^2.6.5
+  custom_lint: ^0.7.6
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

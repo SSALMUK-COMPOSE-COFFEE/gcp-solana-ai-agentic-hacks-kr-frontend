@@ -33,6 +33,10 @@ migrate_working_dir/
 /build/
 /coverage/
 
+# Riverpod/build_runner generated code
+**/*.g.dart
+**/*.freezed.dart
+
 # Symbolication related
 app.*.symbols
 
