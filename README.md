@@ -51,8 +51,10 @@ dart run build_runner watch --delete-conflicting-outputs
 
 ## 브랜치 전략
 
-- `main` — 배포 기준 브랜치. CI(analyze · format · test)가 여기서 돈다
+- `main` — 배포 기준 브랜치
 - `develop` — 기본 브랜치. 평소 작업은 여기서 한다
+
+CI(format · analyze · test)는 두 브랜치의 push와 PR 모두에서 돈다.
 
 ## 검사
 
