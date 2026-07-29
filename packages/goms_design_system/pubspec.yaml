@@ -1,0 +1,30 @@
+name: goms_design_system
+description: Shared design tokens, themes, icons, typography, and layout primitives.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_screenutil: ^5.9.3
+  flutter_svg: ^2.2.3
+  flutter_riverpod: ^3.2.1
+  json_annotation: ^4.9.0
+  image_fade: ^0.6.2
+  responsive_framework: ^1.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  assets:
+    - assets/icons/
+  # 폰트 선언은 비워둔다. GOMS에서 가져온 SUIT ttf 4개가 전부 0바이트라
+  # 등록하면 한글이 전부 두부(□)로 깨진다. 실제 폰트 파일을 받아
+  # assets/fonts/suit/ 에 넣은 뒤 이 블록과 AppTextStyles의
+  # defaultFontFamily/fontPackage를 함께 되살리면 된다.

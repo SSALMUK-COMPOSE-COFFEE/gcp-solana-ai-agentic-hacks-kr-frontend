@@ -34,11 +34,22 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  flutter_riverpod: 2.6.1
-  riverpod_annotation: 2.6.1
+  # Riverpod 3. 상한을 고정한 이유는 4.0.5 / 3.4.1부터 Dart ^3.12를 요구하는데
+  # 이 프로젝트와 CI가 Flutter 3.41.5(Dart 3.11.3)에 묶여 있기 때문이다.
+  # Flutter를 올리면 이 상한들을 풀 수 있다.
+  flutter_riverpod: ">=3.2.1 <3.4.0"
+  riverpod_annotation: ">=4.0.0 <4.0.5"
   go_router: ^17.3.0
   dio: ^5.11.0
   flutter_secure_storage: ^10.3.1
+  # 디자인 시스템이 간격·타이포 스케일에 쓴다. app.dart에서 직접 초기화하므로
+  # 전이 의존이 아니라 명시적으로 선언한다.
+  flutter_screenutil: ^5.9.3
+  responsive_framework: ^1.5.1
+
+  # 디자인 시스템. GOMS 프로젝트에서 가져와 메인 컬러만 교체했다.
+  goms_design_system:
+    path: packages/goms_design_system
 
 dev_dependencies:
   flutter_test:
@@ -50,10 +61,11 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
-  riverpod_generator: ^2.6.5
+  riverpod_generator: ">=4.0.1 <4.0.6"
   build_runner: ^2.5.4
-  riverpod_lint: ^2.6.5
-  custom_lint: ^0.7.6
+  # riverpod_lint / custom_lint는 잠시 제외한다. custom_lint 0.8.x가 analyzer
+  # ^7/^8을 요구하는데 riverpod_generator 4.x는 ^9/^12를 요구해 해결 불가다.
+  # Flutter를 Dart 3.12 이상으로 올리면 다시 넣을 수 있다.
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
