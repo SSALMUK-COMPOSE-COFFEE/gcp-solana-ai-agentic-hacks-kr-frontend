@@ -51,6 +51,6 @@ final class SecureTokenStorage implements TokenStorage {
 }
 
 @Riverpod(keepAlive: true)
-TokenStorage tokenStorage(TokenStorageRef ref) {
+TokenStorage tokenStorage(Ref ref) {
   return const SecureTokenStorage(FlutterSecureStorage());
 }

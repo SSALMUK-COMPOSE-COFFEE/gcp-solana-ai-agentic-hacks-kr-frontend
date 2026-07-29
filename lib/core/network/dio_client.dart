@@ -24,7 +24,7 @@ BaseOptions _baseOptions() {
 /// after a refresh — all cases where re-entering [AuthInterceptor] would either
 /// recurse or attach a stale token.
 @Riverpod(keepAlive: true)
-Dio authFreeDio(AuthFreeDioRef ref) {
+Dio authFreeDio(Ref ref) {
   final dio = Dio(_baseOptions());
   if (kDebugMode) {
     dio.interceptors.add(_debugLogInterceptor());
@@ -34,7 +34,7 @@ Dio authFreeDio(AuthFreeDioRef ref) {
 
 /// The client every authenticated data source should use.
 @Riverpod(keepAlive: true)
-Dio dio(DioRef ref) {
+Dio dio(Ref ref) {
   final dio = Dio(_baseOptions());
   dio.interceptors.add(
     AuthInterceptor(
