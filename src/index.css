@@ -1,0 +1,34 @@
+@import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0f1419;
+  --color-surface: #151b23;
+  --color-card: #1a222c;
+  --color-raised: #202a36;
+  --color-line: #2a3542;
+  --color-primary: #4285f4;
+  --color-primary-deep: #2f6de0;
+  --color-accent: #14f195;
+  --color-ink: #e8eaed;
+  --color-mute: #8b95a3;
+  --color-faint: #5c6673;
+  --color-danger: #f46262;
+  --color-warn: #f4b942;
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, "Segoe UI", sans-serif;
+}
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+}
+
+body {
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+}
